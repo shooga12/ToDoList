@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>To Do List!</title>
+    <meta charset="utf-8" />
+    <script
+      src="https://kit.fontawesome.com/dcebed6e8d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="webAssignment.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="webAssign.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <img class="logo" src="logo.png" width="50" alt="To do list logo" />
+    </div>
+    <div class="day">
+      <i class="fa-solid fa-calendar-day"></i>
+      <p id="date"></p>
+    </div>
+    <div class="list">
+      <h3>To Do List</h3>
+      <div id="todo-container"></div>
+      <div class="do">
+        <p id="done">
+          <input type="button" value="Done" onclick="completed()" />
+        </p>
+      </div>
+    </div>
+    <div id="completed">
+      <h3>Completed Tasks</h3>
+    </div>
+    <div class="form">
+      <h3>Add Task</h3>
+      <form name="form1" method="post" action="#">
+        <p>
+          <label>
+            Task Name:
+            <input type="text" name="name" size="25" class="buttons" /><br />
+          </label>
+        </p>
+        <p>
+          <label>
+            Category:
+            <select id="category">
+              <option value="0">Choose</option>
+              <option>Study</option>
+              <option>Sport</option>
+              <option>Home</option>
+            </select>
+          </label>
+        </p>
+        <p>
+          Priority:
+          <label>
+            <input name="priority" type="radio" value="high" />High
+          </label>
+          <label>
+            <input name="priority" type="radio" value="medium" />Medium
+          </label>
+          <label> <input name="priority" type="radio" value="low" />Low </label>
+        </p>
+        <p>
+          <label>
+            Deadline:
+            <input id="deadline" name="deadline" type="date" min="1899-01-01" />
+          </label>
+        </p>
+        <p class="buttons" id="buttons2">
+          <input type="button" value="Submit" onclick="add()" />
+          <input id="clear" type="reset" value="Clear" />
+        </p>
+      </form>
+    </div>
+    <div class="footer">
+      <p>Copyright &copy; 2022 SelfipediA All right reserved.</p>
+      <a href="mailto:abc@example.com">Send Email</a>
+    </div>
+  </body>
+</html>
